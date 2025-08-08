@@ -40,7 +40,7 @@ const Nav = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/10 backdrop-blur-lg shadow-lg border-b border-white/30 transition-all">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-5 lg:px-10 py-3">
+      <div className="w-[95%] mx-auto flex justify-between items-center px-5 lg:px-10 py-3">
         <NavLink to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-0 select-none">
           <h2 className="text-3xl font-extrabold text-gray-900 select-none pb-[6px]">
             <span className="text-blue-600">Library</span><span className="text-red-600">Manage</span>

@@ -12,13 +12,13 @@ const iconStyles = 'w-7 h-7 text-indigo-500 bg-white rounded-full p-1 shadow-lg'
 const AboutSection = () => {
   return (
     <section className=''>
-    <section className="  max-w-[1190px] mx-auto px-1 lg:px-10 py-24 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden rounded-[15px] shadow-2xl my-16">
+    <section className="w-[95%] mx-auto px-1 lg:px-5 py-24 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden rounded-[15px] shadow-2xl my-16">
 
      
       
       
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl px-3 mx-auto items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 w-[95%] px-3 mx-auto items-center">
 
       
         <Slide direction="left" triggerOnce>

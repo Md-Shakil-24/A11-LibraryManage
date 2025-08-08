@@ -55,7 +55,7 @@ const Banner = () => {
 
   return (
 
-    <div className="relative max-w-7xl px-1 lg:px-10 mx-auto  mt-8 overflow-hidden rounded-t-2xl ">
+    <div className="relative w-[95%] px-1 lg:px-5 mx-auto  mt-8 overflow-hidden rounded-t-2xl ">
       
       <div className="relative h-96 w-full">
         {libraryImages.map((image, index) => (

@@ -57,10 +57,10 @@ const Category = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-1 lg:px-10 py-20  ">
+    <section className="w-[95%] mx-auto px-1 lg:px-5 py-20  ">
      
 
-      <div className="max-w-7xl mx-auto  z-10 relative">
+      <div className=" mx-auto  z-10 relative">
         <h2 className="text-4xl font-extrabold text-center text-indigo-800 mb-12 drop-shadow">
           📚 Explore Categories
         </h2>
