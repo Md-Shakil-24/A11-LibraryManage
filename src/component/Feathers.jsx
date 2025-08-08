@@ -29,7 +29,7 @@ const highlights = [
 
 const Feathers = () => {
   return (
-    <section className="py-20 px-1 lg:px-5 w-[95%] mx-auto  ">
+    <section className="mt-14 px-1 lg:px-5 w-[95%] mx-auto  ">
       <div className=" flex flex-col lg:flex-row items-center justify-between gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}

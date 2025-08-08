@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-10  mt-3">
+    <footer className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-10  mt-12">
       <div className="w-[95%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-1 lg:px-5">
 
        
