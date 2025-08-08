@@ -88,7 +88,7 @@ const AddBook = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="max-w-2xl mx-auto px-6 py-8 bg-white rounded-2xl shadow-lg mt-6"
+      className="max-w-5xl mx-auto px-1 lg:px-5 py-8 bg-white rounded-2xl shadow-lg mt-6"
     >
       <motion.h2
         initial={{ scale: 0.95 }}

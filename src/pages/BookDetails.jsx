@@ -128,7 +128,7 @@ const BookDetails = () => {
     );
 
   return (
-    <div className="max-w-[650px] mx-auto px-1 lg:px-10 p-6">
+    <div className="w-[95%] mx-auto px-1 lg:px-5 mt-8">
       <Helmet>
         <title>Book-Details | Library-Manage</title>
       </Helmet>
