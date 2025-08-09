@@ -9,79 +9,139 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-10  mt-12">
-      <div className="w-[95%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-1 lg:px-5">
-
+    <footer
+      className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-12 mt-16 shadow-lg"
+      aria-label="Site Footer"
+    >
+      <div className="w-[93%] mx-auto justify-between grid grid-cols-1 md:grid-cols-3 gap-12">
        
-        <div>
-          <h2 className="text-3xl font-extrabold text-white mb-2 select-none  bg-emerald-300/10 rounded-2xl px-3 text-center pb-[3px]">
-            <span className="text-blue-500">Library</span><span className="text-red-500">Manage</span>
+        <section aria-labelledby="footer-about" className="space-y-4 max-w-md">
+          <h2
+            id="footer-about"
+            className="text-3xl font-extrabold select-none bg-emerald-300/20 rounded-xl px-4 py-1 inline-block text-center"
+          >
+            <span className="text-blue-500">Library</span>
+            <span className="text-red-500">Manage</span>
           </h2>
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-gray-300 text-base leading-relaxed">
             Empowering readers and researchers through accessible, digital knowledge.
           </p>
-          <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-              <FaFacebookF />
-            </a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-              <FaTwitter />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-              <FaInstagram />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-              <FaYoutube />
-            </a>
-          </div>
-        </div>
+          <nav aria-label="Social media" className="flex space-x-6 mt-4">
+            {[{
+              href: 'https://facebook.com',
+              label: 'Facebook',
+              icon: <FaFacebookF size={24} />
+            },{
+              href: 'https://x.com',
+              label: 'Twitter',
+              icon: <FaTwitter size={24} />
+            },{
+              href: 'https://instagram.com',
+              label: 'Instagram',
+              icon: <FaInstagram size={24} />
+            },{
+              href: 'https://youtube.com',
+              label: 'YouTube',
+              icon: <FaYoutube size={24} />
+            }].map(({href, label, icon}) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="text-gray-400 hover:text-white transition-transform transform hover:scale-110"
+              >
+                {icon}
+              </a>
+            ))}
+          </nav>
+        </section>
 
        
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Explore</h3>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
-            <li><Link to="/auth/all-books" className="hover:text-blue-400">All Books</Link></li>
-            <li><Link to="/auth/add-book" className="hover:text-blue-400">Add Book</Link></li>
-            <li><Link to="/auth/borrowed" className="hover:text-blue-400">Borrowed Books</Link></li>
+        <section aria-labelledby="footer-explore" className="space-y-4">
+          <h3
+            id="footer-explore"
+            className="text-xl font-semibold border-b border-gray-700 pb-2"
+          >
+            Explore
+          </h3>
+          <ul className="space-y-3 text-gray-300 text-sm font-medium">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/auth/all-books", label: "All Books" },
+              { to: "/auth/add-book", label: "Add Book" },
+              { to: "/auth/borrowed", label: "Borrowed Books" },
+            ].map(({ to, label }) => (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className="hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
-        </div>
+        </section>
 
-        
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Support</h3>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="#" className="hover:text-blue-400">Help Center</Link></li>
-            <li><Link to="#" className="hover:text-blue-400">Contact Us</Link></li>
-            <li><Link to="#" className="hover:text-blue-400">Borrowing Policy</Link></li>
-            <li><Link to="#" className="hover:text-blue-400">Accessibility</Link></li>
-          </ul>
-        </div>
-
-       
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Stay Updated</h3>
-          <p className="text-sm text-gray-400 mb-3">Join our newsletter for book releases and updates.</p>
-          <div className="flex">
+   
+        <section aria-labelledby="footer-newsletter" className="space-y-4 max-w-md">
+          <h3
+            id="footer-newsletter"
+            className="text-xl font-semibold border-b border-gray-700 pb-2"
+          >
+            Stay Updated
+          </h3>
+          <p className="text-gray-400 text-sm font-medium">
+            Join our newsletter for book releases and updates.
+          </p>
+          <form
+            className="flex"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert('Subscribed!');
+            }}
+          >
+            <label htmlFor="email" className="sr-only">
+              Email address
+            </label>
             <input
               type="email"
+              id="email"
+              name="email"
+              required
               placeholder="Enter your email"
-              className="w-full px-4 py-2 rounded-l-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none"
+              className="flex-grow px-4 py-3 rounded-l-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button className="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700 transition">
-              <FaEnvelope />
+            <button
+              type="submit"
+              aria-label="Subscribe to newsletter"
+              className="bg-blue-600 px-5 py-3 rounded-r-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-center"
+            >
+              <FaEnvelope size={20} />
             </button>
-          </div>
-        </div>
+          </form>
+        </section>
       </div>
 
-      
-      <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        <p>&copy; {new Date().getFullYear()} LibraryManage. All rights reserved.</p>
-        <div className="mt-2 flex justify-center gap-4 text-xs">
-          <Link to="#" className="hover:text-white transition">Privacy Policy</Link>
-          <Link to="#" className="hover:text-white transition">Terms of Use</Link>
-          <Link to="#" className="hover:text-white transition">Cookie Preferences</Link>
+     
+      <div className="mt-16 border-t border-gray-700 pt-6 text-center text-sm text-gray-400 select-none">
+        <p>© {new Date().getFullYear()} LibraryManage. All rights reserved.</p>
+        <div className="mt-3 flex justify-center gap-6 text-xs font-medium">
+          {[
+            { to: "#", label: "Privacy Policy" },
+            { to: "#", label: "Terms of Use" },
+            { to: "#", label: "Cookie Preferences" },
+          ].map(({ to, label }) => (
+            <Link
+              key={label}
+              to={to}
+              className="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       </div>
     </footer>

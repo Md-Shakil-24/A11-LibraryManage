@@ -57,7 +57,7 @@ const Category = () => {
   };
 
   return (
-    <section className="w-[95%] mx-auto px-1 lg:px-5 mt-12  ">
+    <section className="w-[99%] mx-auto px-1 lg:px-5 mt-12  ">
      
 
       <div className=" mx-auto  z-10 relative">

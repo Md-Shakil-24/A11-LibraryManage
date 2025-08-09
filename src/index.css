@@ -5,8 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html.dark {
-  background-color: #1f2937; /* optional for full page background */
+  background-color: #1f2937; 
+} 
+
+ .theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
