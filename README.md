@@ -8,7 +8,7 @@ The system supports Firebase Authentication and JWT protection to ensure secure 
 
 ## 🌐 Live Site
 
-🔗 [Click here to view the live project](https://library-manage-b11-a11.netlify.app/)
+🔗 [Click here to view the live project](https://library-a11.netlify.app/)
 
 ---
 
