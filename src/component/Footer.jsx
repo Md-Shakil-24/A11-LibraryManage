@@ -6,7 +6,7 @@ import {
   FaYoutube,
   FaEnvelope,
 } from 'react-icons/fa';
-
+//footer
 const Footer = () => {
   return (
     <footer
