@@ -13,7 +13,7 @@ const Footer = () => {
       className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-12 mt-16 shadow-lg"
       aria-label="Site Footer"
     >
-      <div className="w-[93%] mx-auto justify-between grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="w-[99%] lg:px-10 mx-auto justify-between grid grid-cols-1 md:grid-cols-3 gap-12">
        
         <section aria-labelledby="footer-about" className="space-y-4 max-w-md">
           <h2

@@ -119,7 +119,7 @@ const MyBorrowedBooks = () => {
   }
 
   return (
-    <div className="w-[95%] mx-auto p-6 px-2 lg:px-5">
+    <div className="w-[99%] mx-auto p-6 px-2 lg:px-5">
 
 
 

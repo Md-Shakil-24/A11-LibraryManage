@@ -10,6 +10,8 @@ import AboutSection from '../component/About';
 import Category from '../component/Category';
 import Feathers from '../component/Feathers';
 
+import ReaderStories from '../component/Benifits';
+
 
 
 
@@ -30,6 +32,7 @@ const Home = () => {
       
       <Feathers></Feathers>
       <AboutSection></AboutSection>
+      <ReaderStories></ReaderStories>
      
       
       

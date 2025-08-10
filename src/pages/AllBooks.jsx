@@ -126,7 +126,7 @@ const AllBooks = () => {
   }
 
   return (
-    <div className="w-[95%] mx-auto px-1 lg:px-5 mt-8">
+    <div className="w-[99%] mx-auto px-1 lg:px-5 mt-8">
       <h2 className="text-3xl font-bold text-center text-blue-700 mb-8">
         📚 All Books
       </h2>
