@@ -25,7 +25,7 @@ const testimonials = [
 //new add for 7 section
 const ReaderStories = () => {
   return (
-    <section className="mt-20 px-1 lg:px-5 w-[99%] mx-auto">
+    <section className="mt-20 lg:px-5 w-[99%] mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

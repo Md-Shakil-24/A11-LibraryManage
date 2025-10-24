@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,20 +10,20 @@ import {
 const Footer = () => {
   return (
     <footer
-      className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-12 mt-16 shadow-lg"
+      className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white  pt-16 pb-12 mt-16 shadow-lg"
       aria-label="Site Footer"
     >
-      <div className="w-[99%] lg:px-10 mx-auto justify-between grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="w-[99%] px-3 lg:px-10 mx-auto justify-between grid grid-cols-1 md:grid-cols-3 gap-12">
        
         <section aria-labelledby="footer-about" className="space-y-4 max-w-md">
-          <h2
-            id="footer-about"
-            className="text-3xl font-extrabold select-none bg-emerald-300/20 rounded-xl px-4 py-1 inline-block text-center"
-          >
-            <span className="text-blue-500">Library</span>
-            <span className="text-red-500">Manage</span>
-          </h2>
-          <p className="text-gray-300 text-base leading-relaxed">
+          <NavLink
+          to="/"
+          
+          className="px-3  py-1 rounded-full bg-gradient-to-r from-blue-300 to-purple-300 text-gray-800 text-2xl font-extrabold shadow-sm select-none hover:brightness-110 transition"
+        >
+          Library<span className="text-yellow-400">Manage</span>
+        </NavLink>
+          <p className="text-gray-300 mt-4 text-base leading-relaxed">
             Empowering readers and researchers through accessible, digital knowledge.
           </p>
           <nav aria-label="Social media" className="flex space-x-6 mt-4">
